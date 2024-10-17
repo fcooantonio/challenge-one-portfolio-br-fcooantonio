@@ -4,6 +4,7 @@
 
 :root {
     --text-color-1: #464646;
+    --text-color-2: #A2A2A2;
     --color-blue: #2A7AE4;
     --bg-color-1: #F5F5F5;
     --bg-color-2: #EAF2FD;
@@ -14,6 +15,7 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 }
 
 html, body {
@@ -69,7 +71,6 @@ main {
     flex-direction: column;
     margin-top: 88px;
     gap: 32px;
-    overflow-y: hidden;
     & > :nth-child(even) {
         background-color: var(--bg-color-2);
     }
@@ -88,6 +89,7 @@ main {
 #apresentacao {
     height: 368px;
     display: flex;
+    gap: 16px;
     & .apresentacao-descricao {
         padding: 40px 0;
         display: flex;
@@ -274,6 +276,10 @@ main {
                         cursor: pointer;
                         border: 1px solid var(--color-blue);
                         color: var(--color-blue);
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 18.78px;
+                        text-align: left;
                     }
                     & button:nth-child(even) {
                         background-color: var(--color-blue);
@@ -286,4 +292,65 @@ main {
             flex-direction: row-reverse;
         }
     }
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 128px 152px 64px 152px;
+    & form {
+        width: 656px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+        gap: 32px;
+        & div {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            & input, textarea {
+                width: 100%;
+                height: 56px;
+                padding: 8px;
+                border-radius: 4px;
+                &::placeholder {
+                    color: var(--text-color-2);
+                }
+            }
+            & textarea {
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 132px;
+                max-height: fit-content;
+            }
+        }
+        & .enviar {
+            width: max-content;
+            height: 51px;
+            padding: 16px;
+            cursor: pointer;
+            background-color: var(--color-blue);
+            color: var(--bg-color-3);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.78px;
+            text-align: left;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 32px 0;
+    background-color: var(--bg-color-3);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.78px;
+    text-align: center;
 }
