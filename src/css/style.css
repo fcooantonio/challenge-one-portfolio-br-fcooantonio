@@ -2,11 +2,12 @@
     box-sizing: border-box;
 }
 
-
 :root {
     --text-color-1: #464646;
+    --color-blue: #2A7AE4;
     --bg-color-1: #F5F5F5;
     --bg-color-2: #EAF2FD;
+    --bg-color-3: #FFF;
 }
 
 .root {
@@ -24,7 +25,7 @@ body {
     background-color: var(--bg-color-1);
 }
 
-.menu__principal {
+.menu-principal {
     width: 100%;
     height: 88px;
     display: flex;
@@ -45,9 +46,9 @@ body {
             text-align: left;
             text-wrap: nowrap;
         }
-        & img {
-            width: auto;
-            height: fit-content;
+        & ion-icon {
+            font-size: 24px;
+            color: var(--text-color-1);
         }
     }
     & nav {
@@ -68,72 +69,125 @@ main {
     flex-direction: column;
     margin-top: 88px;
     gap: 32px;
-    & #apresentacao {
-        width: 100%;
-        height: 368px;
-        padding: 0 152px;
-        display: flex;
-        & .apresentacao__descricao {
-            padding: 40px 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            & h1 {
-                font-size: 48px;
-                font-weight: 700;
-                line-height: 60px;
-                text-align: left;
-            }
-            & p {
-                font-size: 22px;
-                font-weight: 400;
-                line-height: 25.83px;
-                text-align: left;
-            }
-            & ul {
-                width: 100%;
-                display: flex;
-                gap: 32px;
-                & li {
-                    height: 24px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 18px;
-                    text-align: left;
-                    cursor: pointer;
-                    & ion-icon {
-                        rotate: -45deg;
-                    }
-                }
-            }
-        }
-        & > img {
-            width: 368px;
-            height: 368px;
-            border-radius: 50%;
-        }
-    }
-    & #sobre-mim {
+    overflow-y: hidden;
+}
+
+#apresentacao {
+    width: 100%;
+    height: 368px;
+    padding: 0 152px;
+    display: flex;
+    & .apresentacao-descricao {
+        padding: 40px 0;
         display: flex;
         flex-direction: column;
-        padding: 62px 152px;
-        gap: 16px;
-        background-color: var(--bg-color-2);
-        & h2 {
-            font-size: 32px;
+        justify-content: space-between;
+        & h1 {
+            font-size: 48px;
             font-weight: 700;
-            line-height: 38px;
+            line-height: 60px;
             text-align: left;
         }
         & p {
-            max-width: 80%;
-            font-size: 16px;
+            font-size: 22px;
             font-weight: 400;
-            line-height: 18.78px;
+            line-height: 25.83px;
             text-align: left;
         }
+        & ul {
+            width: 100%;
+            display: flex;
+            gap: 32px;
+            & li {
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 18px;
+                text-align: left;
+                cursor: pointer;
+                & ion-icon {
+                    rotate: -45deg;
+                }
+            }
+        }
+    }
+    & > img {
+        width: 368px;
+        height: 368px;
+        border-radius: 50%;
+    }
+}
+
+#sobre-mim {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 62px 152px;
+    gap: 16px;
+    background-color: var(--bg-color-2);
+    & h2 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+        text-align: left;
+    }
+    & p {
+        max-width: 80%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.78px;
+        text-align: left;
+    }
+}
+
+#skills-hobbies {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 152px;
+    & h2 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 37.57px;
+        text-align: center;
+    }
+    & .skills, .hobbies {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        & ul {
+            display: flex;
+            gap: 16px;
+            & li {
+                width: 176px;
+                height: 176px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-end;
+                padding: 16px;
+                gap: 8px;
+                background-color: var(--bg-color-3);
+                & ion-icon {
+                    color: #2A7AE4;
+                    font-size: 32px;
+                }
+                & p {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 18.78px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    & .hobbies {
+        margin: 88px 0;
     }
 }
