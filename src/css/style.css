@@ -22,6 +22,7 @@ html, body {
 
 body {
     font-family: 'Raleway', sans-serif;
+    color: var(--text-color-1);
     background-color: var(--bg-color-1);
 }
 
@@ -33,7 +34,6 @@ body {
     justify-content: space-between;
     padding: 0 152px;
     top: 0;
-    color: var(--text-color-1);
     & .logo {
         width: max-content;
         display: flex;
@@ -70,12 +70,23 @@ main {
     margin-top: 88px;
     gap: 32px;
     overflow-y: hidden;
+    & > :nth-child(even) {
+        background-color: var(--bg-color-2);
+    }
+    & > section {
+        padding: 0 152px;
+        & h2 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 37.57px;
+            text-align: center;
+        }
+    }
 }
 
 #apresentacao {
     width: 100%;
     height: 368px;
-    padding: 0 152px;
     display: flex;
     & .apresentacao-descricao {
         padding: 40px 0;
@@ -127,13 +138,6 @@ main {
     flex-direction: column;
     padding: 62px 152px;
     gap: 16px;
-    background-color: var(--bg-color-2);
-    & h2 {
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38px;
-        text-align: left;
-    }
     & p {
         max-width: 80%;
         font-size: 16px;
@@ -149,13 +153,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 152px;
-    & h2 {
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 37.57px;
-        text-align: center;
-    }
     & .skills, .hobbies {
         width: 100%;
         display: flex;
@@ -175,7 +172,7 @@ main {
                 gap: 8px;
                 background-color: var(--bg-color-3);
                 & ion-icon {
-                    color: #2A7AE4;
+                    color: var(--color-blue);
                     font-size: 32px;
                 }
                 & p {
@@ -189,5 +186,50 @@ main {
     }
     & .hobbies {
         margin: 88px 0;
+    }
+}
+
+#formacao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 82px 152px;
+    gap: 32px;
+    & ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        & li {
+            display: flex;
+            flex-direction: column;
+            width: 368px;
+            gap: 8px;
+            & div {
+                height: 286px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--bg-color-3);
+                padding: 16px;
+                & img {
+                    width: 190px;
+                }
+            }
+            & p:nth-child(2) {
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 25.83px;
+                text-align: left;
+            }
+            & p:nth-child(3) {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 18.78px;
+                text-align: left;
+            }
+        }
     }
 }
